@@ -1,0 +1,581 @@
+<!-- <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wedding Invitation</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: linear-gradient(135deg, #fdf6f0, #f8e8e8);
+        overflow-x: hidden;
+      }
+
+      /* Floating animation */
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      /* Fade animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .container {
+        text-align: center;
+        padding: 40px 20px;
+        animation: fadeIn 1.5s ease-in-out;
+      }
+
+      .card {
+        background: white;
+        border-radius: 20px;
+        padding: 30px;
+        max-width: 500px;
+        margin: auto;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        animation: fadeIn 2s ease-in-out;
+      }
+
+      /* Ganesha Icon */
+      .ganesha {
+        font-size: 50px;
+        animation: float 3s ease-in-out infinite;
+      }
+
+      /* Names */
+      .names {
+        font-size: 24px;
+        color: #b76e79;
+        margin: 10px 0;
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-block;
+        margin: 10px;
+        padding: 12px 20px;
+        background: linear-gradient(45deg, #b76e79, #ff7e5f);
+        color: white;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Flower animation */
+      .flower {
+        position: fixed;
+        top: -50px;
+        font-size: 20px;
+        animation: fall linear infinite;
+      }
+
+      @keyframes fall {
+        to {
+          transform: translateY(100vh);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="ganesha">🕉️</div>
+
+        <h1>திருமண அழைப்பிதழ்</h1>
+
+        <div class="names">சி. ஜெயராஜ் 💍 கு. காவேரி</div>
+
+        <p>
+          With the blessings of our elders and the grace of the Almighty,<br />
+          we joyfully invite you to share in our happiness as we unite in
+          marriage.
+        </p>
+
+        <h3>📅 April 20, 2026</h3>
+        <p>⏰ 9:30 AM – 10:30 AM</p>
+
+        <a
+          class="btn"
+          href="https://www.google.com/maps/place/A.S.V+Mandapam/data=!4m2!3m1!1s0x0:0x200d8d9ffcda74ed"
+        >
+          📍 Wedding Location
+        </a>
+
+        <a
+          class="btn"
+          href="https://www.google.com/maps/place/10%C2%B012'10.7%22N+78%C2%B036'41.9%22E/"
+        >
+          🍽 Reception
+        </a>
+
+        <p>Lunch follows at 11:00 AM</p>
+
+        <p>🙏 உங்கள் வருகை எங்களுக்கு பெருமை 🙏</p>
+      </div>
+    </div>
+
+    <script>
+      // Flower falling effect
+      for (let i = 0; i < 20; i++) {
+        let flower = document.createElement("div");
+        flower.className = "flower";
+        flower.innerHTML = "🌸";
+        flower.style.left = Math.random() * 100 + "vw";
+        flower.style.animationDuration = 5 + Math.random() * 5 + "s";
+        document.body.appendChild(flower);
+      }
+    </script>
+  </body>
+</html> -->
+<!-- <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wedding Invitation</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: linear-gradient(135deg, #fff5f5, #f3e7ff);
+        overflow-x: hidden;
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-12px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      .container {
+        padding: 30px 15px;
+        text-align: center;
+      }
+
+      .card {
+        max-width: 600px;
+        margin: auto;
+        background: white;
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        animation: fadeIn 1.5s ease;
+      }
+
+      .ganesha {
+        font-size: 50px;
+        animation: float 3s infinite;
+      }
+
+      h1 {
+        color: #b76e79;
+      }
+
+      .names {
+        font-size: 22px;
+        font-weight: bold;
+        color: #444;
+        margin: 15px 0;
+      }
+
+      .role {
+        font-size: 14px;
+        color: #777;
+      }
+
+      .section {
+        margin-top: 20px;
+        animation: fadeIn 2s ease;
+      }
+
+      .btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 12px 20px;
+        background: linear-gradient(45deg, #b76e79, #ff7e5f);
+        color: white;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        transform: scale(1.1);
+      }
+
+      /* Flower animation */
+      .flower {
+        position: fixed;
+        top: -50px;
+        font-size: 20px;
+        animation: fall linear infinite;
+      }
+
+      @keyframes fall {
+        to {
+          transform: translateY(100vh);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="ganesha">🕉️</div>
+
+        <h1>Wedding Invitation</h1>
+
+        <p>
+          With the divine blessings of Lord Ganesha<br />
+          and the elders of our families
+        </p>
+
+        <p><b>We cordially invite you to the wedding of</b></p>
+
+        <div class="names">
+          K. Madhushanth
+          <div class="role">
+            SCPL Head of Operations<br />
+            Son of Mr. & Mrs. Kandasamy Vijayamalar
+          </div>
+        </div>
+
+        <h3>💍</h3>
+
+        <div class="names">
+          S. Dhuwaraga
+          <div class="role">
+            Visa Officer, Embassy of Kuwait<br />
+            Daughter of Mr. & Mrs. Sandhirakasan Parimaladevi
+          </div>
+        </div>
+
+        <div class="section">
+          <p><b>The sacred wedding ceremony will be held</b></p>
+
+          <h3>📅 Sunday, 12th April 2026</h3>
+          <p>⏰ 9:00 AM – 12:00 Noon</p>
+        </div>
+
+        <div class="section">
+          <h3>📍 Venue</h3>
+
+          <p>Prince Wedding Hall - Hatton</p>
+
+          <a
+            class="btn"
+            href="https://www.google.com/maps/place/Prince+Hall/data=!4m2!3m1!1s0x0:0xd52f4723e4bb56f4?sa=X&ved=1t:2428&ictx=111"
+          >
+            View Location
+          </a>
+        </div>
+
+        <div class="section">
+          <p>
+            Your presence and blessings will greatly enhance<br />
+            the joy and sanctity of this sacred occasion
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Flower animation
+      for (let i = 0; i < 25; i++) {
+        let flower = document.createElement("div");
+        flower.className = "flower";
+        flower.innerHTML = "🌸";
+        flower.style.left = Math.random() * 100 + "vw";
+        flower.style.animationDuration = 5 + Math.random() * 5 + "s";
+        document.body.appendChild(flower);
+      }
+    </script>
+    <script>
+      // Flower animation
+      for (let i = 0; i < 7; i++) {
+        let flower = document.createElement("div");
+        flower.className = "flower";
+        flower.innerHTML = "🌹";
+        flower.style.left = Math.random() * 100 + "vw";
+        flower.style.animationDuration = 5 + Math.random() * 5 + "s";
+        document.body.appendChild(flower);
+      }
+    </script>
+  </body>
+</html> -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Premium Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Wedding Invitation</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #fff0f5, #f3e7ff);
+        overflow-x: hidden;
+      }
+
+      /* Fade + Slide */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Glow effect */
+      @keyframes glow {
+        0% {
+          text-shadow: 0 0 5px #ff9a9e;
+        }
+        50% {
+          text-shadow: 0 0 20px #ff4d6d;
+        }
+        100% {
+          text-shadow: 0 0 5px #ff9a9e;
+        }
+      }
+
+      /* Heartbeat */
+      @keyframes heartbeat {
+        0% {
+          transform: scale(1);
+        }
+        25% {
+          transform: scale(1.05);
+        }
+        50% {
+          transform: scale(1);
+        }
+      }
+
+      /* Floating */
+      @keyframes float {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      .container {
+        padding: 30px 15px;
+        text-align: center;
+      }
+
+      .card {
+        max-width: 650px;
+        margin: auto;
+        background: white;
+        border-radius: 25px;
+        padding: 30px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        animation: fadeUp 1.5s ease;
+      }
+
+      /* Title */
+      h1 {
+        font-family: "Great Vibes", cursive;
+        font-size: 40px;
+        background: linear-gradient(45deg, #ff4d6d, #b76e79);
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: glow 3s infinite;
+      }
+
+      /* Names */
+      .names {
+        font-family: "Great Vibes", cursive;
+        font-size: 30px;
+        color: #444;
+        margin: 15px 0;
+        animation: heartbeat 2s infinite;
+      }
+
+      .role {
+        font-size: 14px;
+        color: #777;
+        margin-bottom: 10px;
+      }
+
+      /* Section */
+      .section {
+        margin-top: 20px;
+        animation: fadeUp 2s ease;
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 12px 22px;
+        background: linear-gradient(45deg, #ff4d6d, #ff7e5f);
+        color: white;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Shine effect */
+      .btn::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.3);
+        transition: 0.5s;
+      }
+
+      .btn:hover::after {
+        width: 100%;
+      }
+
+      /* Floating flowers */
+      .flower {
+        position: fixed;
+        top: -50px;
+        font-size: 20px;
+        animation: fall linear infinite;
+      }
+
+      @keyframes fall {
+        to {
+          transform: translateY(100vh);
+        }
+      }
+
+      /* Ganesha */
+      .ganesha {
+        font-size: 50px;
+        animation: float 3s infinite;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="ganesha">🕉️</div>
+
+        <h1>Wedding Invitation</h1>
+
+        <p>With the divine blessings of Lord Ganesha and our elders</p>
+
+        <div class="names">
+          K. Madhushanth
+          <div class="role">SCPL Head of Operations</div>
+        </div>
+
+        💍
+
+        <div class="names">
+          S. Dhuwaraga
+          <div class="role">Visa Officer, Embassy of Kuwait</div>
+        </div>
+
+        <div class="section">
+          <h3>📅 Sunday, 12th April 2026</h3>
+          <p>⏰ 9:00 AM – 12:00 Noon</p>
+        </div>
+
+        <div class="section">
+          <h3>📍 Prince Wedding Hall - Hatton</h3>
+
+          <a
+            class="btn"
+            href="https://www.google.com/local/place/fid/0x3ae39b769ada4163:0xd52f4723e4bb56f4"
+          >
+            View Location
+          </a>
+        </div>
+
+        <div class="section">
+          <p>Your presence and blessings mean everything to us 💖</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Flower animation
+      for (let i = 0; i < 30; i++) {
+        let flower = document.createElement("div");
+        flower.className = "flower";
+        flower.innerHTML = "🌸";
+        flower.style.left = Math.random() * 100 + "vw";
+        flower.style.animationDuration = 4 + Math.random() * 6 + "s";
+        document.body.appendChild(flower);
+      }
+    </script>
+  </body>
+</html>
