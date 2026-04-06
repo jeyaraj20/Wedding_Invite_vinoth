@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Premium Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Wedding Invitation</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #fff0f5, #f3e7ff);
+        overflow-x: hidden;
+      }
+
+      /* Animations */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes glow {
+        0% {
+          text-shadow: 0 0 5px #ff9a9e;
+        }
+        50% {
+          text-shadow: 0 0 20px #ff4d6d;
+        }
+        100% {
+          text-shadow: 0 0 5px #ff9a9e;
+        }
+      }
+
+      @keyframes heartbeat {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      @keyframes fall {
+        to {
+          transform: translateY(100vh);
+        }
+      }
+
+      .container {
+        padding: 30px 15px;
+        text-align: center;
+      }
+
+      .card {
+        max-width: 650px;
+        margin: auto;
+        background: white;
+        border-radius: 25px;
+        padding: 30px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        animation: fadeUp 1.5s ease;
+      }
+
+      h1 {
+        font-family: "Great Vibes", cursive;
+        font-size: 42px;
+        background: linear-gradient(45deg, #ff4d6d, #b76e79);
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: glow 3s infinite;
+      }
+
+      .names {
+        font-family: "Great Vibes", cursive;
+        font-size: 32px;
+        color: #444;
+        margin: 15px 0;
+        animation: heartbeat 2s infinite;
+      }
+
+      .role {
+        font-size: 14px;
+        color: #777;
+      }
+
+      .section {
+        margin-top: 25px;
+        animation: fadeUp 2s ease;
+      }
+
+      .btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 12px 22px;
+        background: linear-gradient(45deg, #ff4d6d, #ff7e5f);
+        color: white;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: 0.3s;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.3);
+        transition: 0.5s;
+      }
+
+      .btn:hover::after {
+        width: 100%;
+      }
+
+      .flower {
+        position: fixed;
+        top: -50px;
+        font-size: 20px;
+        animation: fall linear infinite;
+      }
+
+      .ganesha {
+        font-size: 55px;
+        animation: float 3s infinite;
+      }
+
+      .divider {
+        font-size: 20px;
+        margin: 10px 0;
+      }
+
+      footer {
+        margin-top: 20px;
+        font-size: 14px;
+        color: #888;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="ganesha">🕉️</div>
+
+        <h1>Wedding Invitation</h1>
+
+        <p>With the divine blessings of Lord Ganesha and our beloved elders</p>
+
+        <div class="names">
+          K. Madhushanth
+          <div class="role">SCPL Head of Operations</div>
+        </div>
+
+        <div class="divider">💍</div>
+
+        <div class="names">
+          S. Dhuwaraga
+          <div class="role">Visa Officer, Embassy of Kuwait</div>
+        </div>
+
+        <div class="section">
+          <h3>📅 Sunday, 12th April 2026</h3>
+          <p>⏰ 9:00 AM – 12:00 Noon</p>
+        </div>
+
+        <div class="section">
+          <h3>📍 Prince Wedding Hall - Hatton</h3>
+
+          <a
+            class="btn"
+            href="https://www.google.com/maps/place/Prince+Hall/data=!4m2!3m1!1s0x0:0xd52f4723e4bb56f4"
+            target="_blank"
+          >
+            View Location
+          </a>
+        </div>
+
+        <div class="section">
+          <p>Your presence and blessings mean everything to us 💖</p>
+        </div>
+
+        <footer>✨ With Love & Joy ✨</footer>
+      </div>
+    </div>
+
+    <script>
+      for (let i = 0; i < 30; i++) {
+        let flower = document.createElement("div");
+        flower.className = "flower";
+        flower.innerHTML = "🌸";
+        flower.style.left = Math.random() * 100 + "vw";
+        flower.style.animationDuration = 4 + Math.random() * 6 + "s";
+        document.body.appendChild(flower);
+      }
+    </script>
+  </body>
+</html>
