@@ -4,12 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Premium Fonts -->
+    <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <title>Madhushanth 💍 Dhuwaraga | Wedding Invitation</title>
 
+    <meta
+      name="description"
+      content="You are cordially invited to the wedding of K. Madhushanth and S. Dhuwaraga on Sunday, 12th April 2026. Join us and bless the couple on their special day."
+    />
+
+    <meta
+      property="og:title"
+      content="Madhushanth ❤️ Dhuwaraga Wedding Invitation"
+    />
+    <meta
+      property="og:description"
+      content="Join us to celebrate the wedding on 12th April 2026 💍"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="favicon.png" />
     <title>Wedding Invitation</title>
 
     <style>
@@ -20,7 +37,6 @@
         overflow-x: hidden;
       }
 
-      /* Animations */
       @keyframes fadeUp {
         from {
           opacity: 0;
@@ -120,30 +136,12 @@
         color: white;
         border-radius: 12px;
         text-decoration: none;
-        font-weight: 500;
         transition: 0.3s;
-        position: relative;
-        overflow: hidden;
       }
 
       .btn:hover {
         transform: scale(1.1);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      }
-
-      .btn::after {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background: rgba(255, 255, 255, 0.3);
-        transition: 0.5s;
-      }
-
-      .btn:hover::after {
-        width: 100%;
       }
 
       .flower {
@@ -159,8 +157,8 @@
       }
 
       .divider {
-        font-size: 20px;
         margin: 10px 0;
+        font-size: 20px;
       }
 
       footer {
@@ -168,10 +166,51 @@
         font-size: 14px;
         color: #888;
       }
+
+      /* Start screen */
+      #startScreen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff0f5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 9999;
+      }
+
+      #startScreen button {
+        padding: 15px 25px;
+        font-size: 16px;
+        border: none;
+        border-radius: 10px;
+        background: #ff4d6d;
+        color: white;
+        cursor: pointer;
+        margin-top: 15px;
+      }
     </style>
   </head>
 
   <body>
+    <!-- 💌 Start Screen -->
+    <div id="startScreen">
+      <h2
+        style="font-family: &quot;Great Vibes&quot;, cursive; font-size: 32px"
+      >
+        💌 Wedding Invitation
+      </h2>
+      <button onclick="startInvite()">Open Invitation 🎉</button>
+    </div>
+
+    <!-- 🎵 Background Music -->
+    <audio id="bgMusic" loop>
+      <source src="./bgm.mp3" type="audio/mpeg" />
+    </audio>
+
     <div class="container">
       <div class="card">
         <div class="ganesha">🕉️</div>
@@ -199,7 +238,6 @@
 
         <div class="section">
           <h3>📍 Prince Wedding Hall - Hatton</h3>
-
           <a
             class="btn"
             href="https://www.google.com/maps/place/Prince+Hall/data=!4m2!3m1!1s0x0:0xd52f4723e4bb56f4"
@@ -218,6 +256,7 @@
     </div>
 
     <script>
+      // 🌸 Flower animation
       for (let i = 0; i < 30; i++) {
         let flower = document.createElement("div");
         flower.className = "flower";
@@ -225,6 +264,25 @@
         flower.style.left = Math.random() * 100 + "vw";
         flower.style.animationDuration = 4 + Math.random() * 6 + "s";
         document.body.appendChild(flower);
+      }
+
+      // 🎵 Start invite (music play)
+      function startInvite() {
+        const music = document.getElementById("bgMusic");
+
+        music.volume = 0;
+        music.play();
+
+        // Fade-in sound
+        let v = 0;
+        const i = setInterval(() => {
+          if (v < 1) {
+            v += 0.05;
+            music.volume = v;
+          } else clearInterval(i);
+        }, 200);
+
+        document.getElementById("startScreen").style.display = "none";
       }
     </script>
   </body>
